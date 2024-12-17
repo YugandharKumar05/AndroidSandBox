@@ -43,7 +43,8 @@ fun MainScreen(navController: NavHostController) {
         "Dropdown with Checkboxes",
         "Search Bar",
         "Expandable Cards",
-        "Pagination Loader"
+        "Pagination Loader",
+        "Pull To Refresh"
     )
 
     Scaffold(
@@ -85,6 +86,7 @@ fun MainScreen(navController: NavHostController) {
                                         "Search Bar" -> navController.navigate("searchBar")
                                         "Expandable Cards" -> navController.navigate("expandableCards")
                                         "Pagination Loader" -> navController.navigate("paginationLoader")
+                                        "Pull To Refresh" -> navController.navigate("pullToRefresh")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

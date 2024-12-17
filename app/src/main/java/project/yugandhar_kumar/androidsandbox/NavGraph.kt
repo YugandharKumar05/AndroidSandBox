@@ -15,6 +15,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.ExpandableCardsScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PaginationLoaderScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
+import project.yugandhar_kumar.androidsandbox.Screens.PullToRefreshScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
 
@@ -35,6 +36,7 @@ fun NavGraph(navController: NavHostController) {
         composable("searchBar") { SearchBarScreen(navController) }
         composable("expandableCards") { ExpandableCardsScreen(navController) }
         composable("paginationLoader") { PaginationLoaderScreen(navController) }
+        composable("pullToRefresh") { PullToRefreshScreen(navController) }
     }
 }
 
