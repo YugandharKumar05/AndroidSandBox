@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -28,6 +29,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import project.yugandhar_kumar.androidsandbox.ui.theme.AndroidSandBoxTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,15 +41,21 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AndroidSandBoxTheme {
-                    MainScreen()
+                val navController = rememberNavController()
+                NavHost(navController = navController, startDestination = "mainScreen") {
+                    composable("mainScreen") { MainScreen(navController) }
+                    composable("toastMessage") { ToastMessage() }
+                    // Add other screens similarly
                 }
+            }
         }
     }
 }
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
+fun MainScreen(navController: NavHostController) {
     val items = listOf("Toast", "Snack bar", "Alert", "Dialog")
 
     Scaffold(
@@ -69,7 +80,13 @@ fun MainScreen() {
                         Card(
                             modifier = Modifier
                                 .weight(1f)
-                                .height(120.dp),
+                                .height(120.dp)
+                                .clickable {
+                                    when (item) {
+                                        "Toast" -> navController.navigate("toastMessage")
+                                        // Add other navigation actions for "Snack bar", "Alert", "Dialog"
+                                    }
+                                },
                             shape = RoundedCornerShape(8.dp),
                             elevation = CardDefaults.cardElevation(4.dp)
                         ) {
