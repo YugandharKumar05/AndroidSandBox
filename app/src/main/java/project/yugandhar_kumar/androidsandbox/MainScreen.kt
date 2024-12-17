@@ -40,7 +40,8 @@ fun MainScreen(navController: NavHostController) {
         "Popup",
         "Progress Indicator",
         "Checkbox Screen",
-        "Dropdown with Checkboxes"
+        "Dropdown with Checkboxes",
+        "Search Bar"
     )
 
     Scaffold(
@@ -79,6 +80,7 @@ fun MainScreen(navController: NavHostController) {
                                         "Dialog" -> navController.navigate("dialog")
                                         "Checkbox Screen" -> navController.navigate("checkboxScreen")
                                         "Dropdown with Checkboxes" -> navController.navigate("dropDownCheckboxScreen")
+                                        "Search Bar" -> navController.navigate("searchBar")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

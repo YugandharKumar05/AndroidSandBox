@@ -30,6 +30,7 @@ fun NavGraph(navController: NavHostController) {
         composable("progressIndicator") { ProgressIndicatorScreen(navController) }
         composable("checkboxScreen") { CheckboxScreen(navController) }
         composable("dropDownCheckboxScreen") { DropDownCheckboxScreen(navController) }
+        composable("searchBar") { SearchBarScreen(navController) }
     }
 }
 
