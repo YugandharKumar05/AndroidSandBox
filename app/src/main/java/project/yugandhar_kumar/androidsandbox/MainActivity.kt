@@ -33,6 +33,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import project.yugandhar_kumar.androidsandbox.Screens.Alert
+import project.yugandhar_kumar.androidsandbox.Screens.Dialog
+import project.yugandhar_kumar.androidsandbox.Screens.SnackBar
 import project.yugandhar_kumar.androidsandbox.ui.theme.AndroidSandBoxTheme
 
 class MainActivity : ComponentActivity() {
@@ -45,7 +48,9 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController, startDestination = "mainScreen") {
                     composable("mainScreen") { MainScreen(navController) }
                     composable("toastMessage") { ToastMessage() }
-                    // Add other screens similarly
+                    composable("snackBar") { SnackBar() }
+                    composable("Alert") { Alert() }
+                    composable("Dialog") { Dialog() }
                 }
             }
         }
@@ -56,7 +61,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(navController: NavHostController) {
-    val items = listOf("Toast", "Snack bar", "Alert", "Dialog")
+    val items = listOf("Toast", "SnackBar", "Alert", "Dialog")
 
     Scaffold(
         topBar = {
@@ -84,7 +89,9 @@ fun MainScreen(navController: NavHostController) {
                                 .clickable {
                                     when (item) {
                                         "Toast" -> navController.navigate("toastMessage")
-                                        // Add other navigation actions for "Snack bar", "Alert", "Dialog"
+                                        "SnackBar" -> navController.navigate("snackBar")
+                                        "Alert" -> navController.navigate("alert")
+                                        "Dialog" -> navController.navigate("dialog")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),
