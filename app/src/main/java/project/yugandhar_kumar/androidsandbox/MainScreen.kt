@@ -45,7 +45,8 @@ fun MainScreen(navController: NavHostController) {
         "Expandable Cards",
         "Pagination Loader",
         "Pull To Refresh",
-        "Stepper"
+        "Stepper",
+        "Progress Bar"
     )
 
     Scaffold(
@@ -89,6 +90,7 @@ fun MainScreen(navController: NavHostController) {
                                         "Pagination Loader" -> navController.navigate("paginationLoader")
                                         "Pull To Refresh" -> navController.navigate("pullToRefresh")
                                         "Stepper" -> navController.navigate("stepper")
+                                        "Progress Bar" -> navController.navigate("progressBar")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),
