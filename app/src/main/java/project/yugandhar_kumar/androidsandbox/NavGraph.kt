@@ -7,7 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
+import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
+import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
@@ -26,6 +28,8 @@ fun NavGraph(navController: NavHostController) {
         composable("dropdownMenu") { DropdownMenuScreen(navController) }
         composable("popup") { PopupScreen(navController) }
         composable("progressIndicator") { ProgressIndicatorScreen(navController) }
+        composable("checkboxScreen") { CheckboxScreen(navController) }
+        composable("dropDownCheckboxScreen") { DropDownCheckboxScreen(navController) }
     }
 }
 

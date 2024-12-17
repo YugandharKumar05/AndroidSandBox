@@ -30,7 +30,18 @@ import androidx.navigation.NavHostController
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(navController: NavHostController) {
-    val items = listOf("Toast", "SnackBar", "Alert", "Dialog", "Bottom Sheet", "Dropdown Menu", "Popup", "Progress Indicator")
+    val items = listOf(
+        "Toast",
+        "SnackBar",
+        "Alert",
+        "Dialog",
+        "Bottom Sheet",
+        "Dropdown Menu",
+        "Popup",
+        "Progress Indicator",
+        "Checkbox Screen",
+        "Dropdown with Checkboxes"
+    )
 
     Scaffold(
         topBar = {
@@ -66,6 +77,8 @@ fun MainScreen(navController: NavHostController) {
                                         "Popup" -> navController.navigate("popup")
                                         "Progress Indicator" -> navController.navigate("progressIndicator")
                                         "Dialog" -> navController.navigate("dialog")
+                                        "Checkbox Screen" -> navController.navigate("checkboxScreen")
+                                        "Dropdown with Checkboxes" -> navController.navigate("dropDownCheckboxScreen")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),
