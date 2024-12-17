@@ -7,7 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
+import project.yugandhar_kumar.androidsandbox.Screens.CarouselScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
+import project.yugandhar_kumar.androidsandbox.Screens.ChipsSelectionScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
@@ -17,6 +19,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PullToRefreshScreen
+import project.yugandhar_kumar.androidsandbox.Screens.SearchBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
@@ -41,6 +44,8 @@ fun NavGraph(navController: NavHostController) {
         composable("pullToRefresh") { PullToRefreshScreen(navController) }
         composable("stepper") { StepperScreen(navController) }
         composable("progressBar") { ProgressBarScreen(navController) }
+        composable("chipSelection") { ChipsSelectionScreen(navController) }
+        composable("carousel") { CarouselScreen(navController) }
     }
 }
 
