@@ -33,10 +33,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import project.yugandhar_kumar.androidsandbox.Screens.Alert
-import project.yugandhar_kumar.androidsandbox.Screens.Dialog
-import project.yugandhar_kumar.androidsandbox.Screens.SnackBar
-import project.yugandhar_kumar.androidsandbox.Screens.ToastMessage
+import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
+import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
+import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
+import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
 import project.yugandhar_kumar.androidsandbox.ui.theme.AndroidSandBoxTheme
 
 class MainActivity : ComponentActivity() {
@@ -48,10 +48,10 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 NavHost(navController = navController, startDestination = "mainScreen") {
                     composable("mainScreen") { MainScreen(navController) }
-                    composable("toastMessage") { ToastMessage() }
-                    composable("snackBar") { SnackBar() }
-                    composable("Alert") { Alert() }
-                    composable("Dialog") { Dialog() }
+                    composable("toastMessage") { ToastMessageScreen(navController) }
+                    composable("snackBar") { SnackBarScreen(navController) }
+                    composable("Alert") { AlertScreen( navController) }
+                    composable("Dialog") { DialogScreen(navController) }
                 }
             }
         }
