@@ -34,7 +34,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
+import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
+import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
+import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
+import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
 import project.yugandhar_kumar.androidsandbox.ui.theme.AndroidSandBoxTheme
@@ -52,6 +56,10 @@ class MainActivity : ComponentActivity() {
                     composable("snackBar") { SnackBarScreen(navController) }
                     composable("Alert") { AlertScreen( navController) }
                     composable("Dialog") { DialogScreen(navController) }
+                    composable("bottomSheet") { BottomSheetScreen(navController) }
+                    composable("dropdownMenu") { DropdownMenuScreen(navController) }
+                    composable("popup") { PopupScreen(navController) }
+                    composable("progressIndicator") { ProgressIndicatorScreen(navController) }
                 }
             }
         }
@@ -62,7 +70,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(navController: NavHostController) {
-    val items = listOf("Toast", "SnackBar", "Alert", "Dialog")
+    val items = listOf("Toast", "SnackBar", "Alert", "Dialog", "Bottom Sheet", "Dropdown Menu", "Popup", "Progress Indicator")
 
     Scaffold(
         topBar = {
@@ -92,6 +100,10 @@ fun MainScreen(navController: NavHostController) {
                                         "Toast" -> navController.navigate("toastMessage")
                                         "SnackBar" -> navController.navigate("snackBar")
                                         "Alert" -> navController.navigate("alert")
+                                        "Bottom Sheet" -> navController.navigate("bottomSheet")
+                                        "Dropdown Menu" -> navController.navigate("dropdownMenu")
+                                        "Popup" -> navController.navigate("popup")
+                                        "Progress Indicator" -> navController.navigate("progressIndicator")
                                         "Dialog" -> navController.navigate("dialog")
                                     }
                                 },
