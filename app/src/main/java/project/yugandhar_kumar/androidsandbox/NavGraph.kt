@@ -17,6 +17,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PullToRefreshScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
+import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
 
 @Composable
@@ -37,6 +38,7 @@ fun NavGraph(navController: NavHostController) {
         composable("expandableCards") { ExpandableCardsScreen(navController) }
         composable("paginationLoader") { PaginationLoaderScreen(navController) }
         composable("pullToRefresh") { PullToRefreshScreen(navController) }
+        composable("stepper") { StepperScreen(navController) }
     }
 }
 
