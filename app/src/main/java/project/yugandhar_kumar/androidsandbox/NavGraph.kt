@@ -11,6 +11,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
+import project.yugandhar_kumar.androidsandbox.Screens.ExpandableCardsScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
@@ -31,6 +32,7 @@ fun NavGraph(navController: NavHostController) {
         composable("checkboxScreen") { CheckboxScreen(navController) }
         composable("dropDownCheckboxScreen") { DropDownCheckboxScreen(navController) }
         composable("searchBar") { SearchBarScreen(navController) }
+        composable("expandableCards") { ExpandableCardsScreen(navController) }
     }
 }
 
