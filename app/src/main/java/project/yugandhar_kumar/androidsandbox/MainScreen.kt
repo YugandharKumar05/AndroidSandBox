@@ -52,7 +52,9 @@ fun MainScreen(navController: NavHostController) {
         "Date Time Picker",
         "Image Picker",
         "Swipe TO Delete",
-        "Floating Action Button"
+        "Floating Action Button",
+        "Bottom Navigation",
+        "Tab Layout With View Pager"
     )
 
     Scaffold(
@@ -103,6 +105,8 @@ fun MainScreen(navController: NavHostController) {
                                         "Image Picker" -> navController.navigate("imagePicker")
                                         "Swipe TO Delete" -> navController.navigate("swipeToDelete")
                                         "Floating Action Button" -> navController.navigate("fabMenu")
+                                        "Bottom Navigation" -> navController.navigate("bottomNavigation")
+                                        "Tab Layout With View Pager" -> navController.navigate("tabLayoutWithViewPager")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
+import project.yugandhar_kumar.androidsandbox.Screens.BottomNavigationScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CarouselScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
@@ -26,6 +27,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.SearchBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SwipeToDeleteScreen
+import project.yugandhar_kumar.androidsandbox.Screens.TabLayoutWithViewPager
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
 
 @Composable
@@ -54,6 +56,8 @@ fun NavGraph(navController: NavHostController) {
         composable("imagePicker") { ImagePickerScreen(navController) }
         composable("swipeToDelete") { SwipeToDeleteScreen(navController) }
         composable("fabMenu") { FabMenuScreen(navController) }
+        composable("bottomNavigation") { BottomNavigationScreen(navController) }
+        composable("tabLayoutWithViewPager") { TabLayoutWithViewPager(navController) }
     }
 }
 
