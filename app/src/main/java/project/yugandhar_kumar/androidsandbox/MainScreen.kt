@@ -54,7 +54,11 @@ fun MainScreen(navController: NavHostController) {
         "Swipe TO Delete",
         "Floating Action Button",
         "Bottom Navigation",
-        "Tab Layout With View Pager"
+        "Tab Layout With View Pager",
+        "Tools Tips",
+        "Network Error",
+        "Full Screen Loading",
+        "Empty State"
     )
 
     Scaffold(
@@ -107,6 +111,10 @@ fun MainScreen(navController: NavHostController) {
                                         "Floating Action Button" -> navController.navigate("fabMenu")
                                         "Bottom Navigation" -> navController.navigate("bottomNavigation")
                                         "Tab Layout With View Pager" -> navController.navigate("tabLayoutWithViewPager")
+                                        "Tools Tips" -> navController.navigate("tooltip")
+                                        "Network Error" -> navController.navigate("networkError")
+                                        "Full Screen Loading" -> navController.navigate("fullScreenLoading")
+                                        "Empty State" -> navController.navigate("emptyState")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

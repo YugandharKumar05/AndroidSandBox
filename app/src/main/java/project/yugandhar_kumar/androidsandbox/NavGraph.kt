@@ -15,9 +15,12 @@ import project.yugandhar_kumar.androidsandbox.Screens.DateTimePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
+import project.yugandhar_kumar.androidsandbox.Screens.EmptyStateScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ExpandableCardsScreen
 import project.yugandhar_kumar.androidsandbox.Screens.FabMenuScreen
+import project.yugandhar_kumar.androidsandbox.Screens.FullScreenLoadingIndicator
 import project.yugandhar_kumar.androidsandbox.Screens.ImagePickerScreen
+import project.yugandhar_kumar.androidsandbox.Screens.NetworkErrorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PaginationLoaderScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressBarScreen
@@ -29,6 +32,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SwipeToDeleteScreen
 import project.yugandhar_kumar.androidsandbox.Screens.TabLayoutWithViewPager
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
+import project.yugandhar_kumar.androidsandbox.Screens.TooltipScreen
 
 @Composable
 fun NavGraph(navController: NavHostController) {
@@ -58,6 +62,10 @@ fun NavGraph(navController: NavHostController) {
         composable("fabMenu") { FabMenuScreen(navController) }
         composable("bottomNavigation") { BottomNavigationScreen(navController) }
         composable("tabLayoutWithViewPager") { TabLayoutWithViewPager(navController) }
+        composable("tooltip") { TooltipScreen(navController) }
+        composable("networkError") { NetworkErrorScreen(navController) }
+        composable("fullScreenLoading") { FullScreenLoadingIndicator(navController) }
+        composable("emptyState") { EmptyStateScreen(navController) }
     }
 }
 
