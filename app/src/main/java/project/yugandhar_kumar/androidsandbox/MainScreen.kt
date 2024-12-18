@@ -50,7 +50,9 @@ fun MainScreen(navController: NavHostController) {
         "Chip Selection",
         "Carousel",
         "Date Time Picker",
-        "Image Picker"
+        "Image Picker",
+        "Swipe TO Delete",
+        "Floating Action Button"
     )
 
     Scaffold(
@@ -99,6 +101,8 @@ fun MainScreen(navController: NavHostController) {
                                         "Carousel" -> navController.navigate("carousel")
                                         "Date Time Picker" -> navController.navigate("dateTimePicker")
                                         "Image Picker" -> navController.navigate("imagePicker")
+                                        "Swipe TO Delete" -> navController.navigate("swipeToDelete")
+                                        "Floating Action Button" -> navController.navigate("fabMenu")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

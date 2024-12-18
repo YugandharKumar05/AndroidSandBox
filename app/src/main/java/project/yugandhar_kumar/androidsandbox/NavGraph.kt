@@ -15,6 +15,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ExpandableCardsScreen
+import project.yugandhar_kumar.androidsandbox.Screens.FabMenuScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ImagePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PaginationLoaderScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
@@ -24,6 +25,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.PullToRefreshScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SearchBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
+import project.yugandhar_kumar.androidsandbox.Screens.SwipeToDeleteScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
 
 @Composable
@@ -50,6 +52,8 @@ fun NavGraph(navController: NavHostController) {
         composable("carousel") { CarouselScreen(navController) }
         composable("dateTimePicker") { DateTimePickerScreen(navController) }
         composable("imagePicker") { ImagePickerScreen(navController) }
+        composable("swipeToDelete") { SwipeToDeleteScreen(navController) }
+        composable("fabMenu") { FabMenuScreen(navController) }
     }
 }
 
