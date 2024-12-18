@@ -10,10 +10,12 @@ import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CarouselScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ChipsSelectionScreen
+import project.yugandhar_kumar.androidsandbox.Screens.DateTimePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ExpandableCardsScreen
+import project.yugandhar_kumar.androidsandbox.Screens.ImagePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PaginationLoaderScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressBarScreen
@@ -46,6 +48,8 @@ fun NavGraph(navController: NavHostController) {
         composable("progressBar") { ProgressBarScreen(navController) }
         composable("chipSelection") { ChipsSelectionScreen(navController) }
         composable("carousel") { CarouselScreen(navController) }
+        composable("dateTimePicker") { DateTimePickerScreen(navController) }
+        composable("imagePicker") { ImagePickerScreen(navController) }
     }
 }
 

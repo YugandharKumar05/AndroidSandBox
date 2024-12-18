@@ -48,7 +48,9 @@ fun MainScreen(navController: NavHostController) {
         "Stepper",
         "Progress Bar",
         "Chip Selection",
-        "Carousel"
+        "Carousel",
+        "Date Time Picker",
+        "Image Picker"
     )
 
     Scaffold(
@@ -95,6 +97,8 @@ fun MainScreen(navController: NavHostController) {
                                         "Progress Bar" -> navController.navigate("progressBar")
                                         "Chip Selection" -> navController.navigate("chipSelection")
                                         "Carousel" -> navController.navigate("carousel")
+                                        "Date Time Picker" -> navController.navigate("dateTimePicker")
+                                        "Image Picker" -> navController.navigate("imagePicker")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),
