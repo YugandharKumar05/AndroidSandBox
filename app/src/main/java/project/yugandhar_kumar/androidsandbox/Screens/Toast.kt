@@ -1,6 +1,8 @@
 package project.yugandhar_kumar.androidsandbox.Screens
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,6 +28,8 @@ import project.yugandhar_kumar.androidsandbox.Screens.Comps.ReusableButton
 fun ToastMessageScreen(navController: NavHostController) {
     val context = LocalContext.current
     val coroutineScope = rememberCoroutineScope()
+    val url = "https://github.com/YugandharKumar05/AndroidSandBox/blob/master/app/src/main/java/project/yugandhar_kumar/androidsandbox/Screens/Toast.kt"
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
     Scaffold(
         topBar = {
@@ -48,7 +52,9 @@ fun ToastMessageScreen(navController: NavHostController) {
                 }
             )
             Spacer(Modifier.height(10.dp))
-            GitHubLoginButton(onClick = { /* Handle Click */ })
+            GitHubLoginButton(onClick = {
+                context.startActivity(intent)
+            })
         }
     }
 }
