@@ -11,6 +11,7 @@ composeBom = "2024.04.01"
 navigationCompose = "2.8.5"
 accompanist-swiperefresh = "0.31.5-beta"
 composeMaterial = "1.4.0"
+androidx-material-icons-extended = "1.5.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,6 +33,7 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 accompanist-swiperefresh = { group = "com.google.accompanist", name = "accompanist-swiperefresh", version.ref = "accompanist-swiperefresh" }
 androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
 accompanist-pager = "com.google.accompanist:accompanist-pager:0.30.1"
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "androidx-material-icons-extended" }
 
 
 [plugins]

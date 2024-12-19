@@ -58,7 +58,11 @@ fun MainScreen(navController: NavHostController) {
         "Tools Tips",
         "Network Error",
         "Full Screen Loading",
-        "Empty State"
+        "Empty State",
+        "Rating Review",
+        "Accordion List",
+        "Segmented Buttons",
+        "Badge",
     )
 
     Scaffold(
@@ -115,6 +119,10 @@ fun MainScreen(navController: NavHostController) {
                                         "Network Error" -> navController.navigate("networkError")
                                         "Full Screen Loading" -> navController.navigate("fullScreenLoading")
                                         "Empty State" -> navController.navigate("emptyState")
+                                        "Rating Review" -> navController.navigate("ratingReview")
+                                        "Accordion List" -> navController.navigate("accordionList")
+                                        "Segmented Buttons" -> navController.navigate("segmentedButtons")
+                                        "Badge" -> navController.navigate("badge")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

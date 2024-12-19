@@ -5,7 +5,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import project.yugandhar_kumar.androidsandbox.Screens.AccordionListScreen
 import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
+import project.yugandhar_kumar.androidsandbox.Screens.BadgeScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomNavigationScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CarouselScreen
@@ -26,7 +28,9 @@ import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PullToRefreshScreen
+import project.yugandhar_kumar.androidsandbox.Screens.RatingReviewScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SearchBarScreen
+import project.yugandhar_kumar.androidsandbox.Screens.SegmentedButtonsScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SwipeToDeleteScreen
@@ -66,6 +70,10 @@ fun NavGraph(navController: NavHostController) {
         composable("networkError") { NetworkErrorScreen(navController) }
         composable("fullScreenLoading") { FullScreenLoadingIndicator(navController) }
         composable("emptyState") { EmptyStateScreen(navController) }
+        composable("ratingReview") { RatingReviewScreen(navController) }
+        composable("accordionList") { AccordionListScreen(navController) }
+        composable("segmentedButtons") { SegmentedButtonsScreen(navController) }
+        composable("badge") { BadgeScreen(navController) }
     }
 }
 

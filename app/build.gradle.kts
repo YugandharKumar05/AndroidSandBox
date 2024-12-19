@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.foundation)
     implementation(libs.androidx.compose.material)
     implementation(libs.accompanist.pager)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation("io.coil-kt:coil-compose:2.6.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
