@@ -65,7 +65,12 @@ fun MainScreen(navController: NavHostController) {
         "Badge",
         "Onboarding",
         "Scroll To Top",
-        "Drag And Drop"
+        "Drag And Drop",
+        "Bottom App Bar With Actions",
+        "Side Navigation Drawer",
+        "Stepper With Progress",
+        "Circular Image Loader",
+        "Custom Dialog Loading"
     )
 
     Scaffold(
@@ -129,6 +134,11 @@ fun MainScreen(navController: NavHostController) {
                                         "Onboarding" -> navController.navigate("onboarding")
                                         "Scroll To Top" -> navController.navigate("scrollToTop")
                                         "Drag And Drop" -> navController.navigate("dragAndDrop")
+                                        "Bottom App Bar With Actions" -> navController.navigate("bottomAppBarWithActions")
+                                        "Side Navigation Drawer" -> navController.navigate("sideNavigationDrawer")
+                                        "Stepper With Progress" -> navController.navigate("stepperWithProgress")
+                                        "Circular Image Loader" -> navController.navigate("circularImageLoader")
+                                        "Custom Dialog Loading" -> navController.navigate("customLoadingDialog")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

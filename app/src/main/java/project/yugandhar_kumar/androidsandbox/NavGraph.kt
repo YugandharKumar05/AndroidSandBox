@@ -8,11 +8,14 @@ import androidx.navigation.compose.composable
 import project.yugandhar_kumar.androidsandbox.Screens.AccordionListScreen
 import project.yugandhar_kumar.androidsandbox.Screens.AlertScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BadgeScreen
+import project.yugandhar_kumar.androidsandbox.Screens.BottomAppBarWithActionsScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomNavigationScreen
 import project.yugandhar_kumar.androidsandbox.Screens.BottomSheetScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CarouselScreen
 import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ChipsSelectionScreen
+import project.yugandhar_kumar.androidsandbox.Screens.CircularImageLoaderScreen
+import project.yugandhar_kumar.androidsandbox.Screens.CustomLoadingDialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DateTimePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DragAndDropScreen
@@ -34,8 +37,10 @@ import project.yugandhar_kumar.androidsandbox.Screens.RatingReviewScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ScrollToTopScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SearchBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SegmentedButtonsScreen
+import project.yugandhar_kumar.androidsandbox.Screens.SideNavigationDrawerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.StepperScreen
+import project.yugandhar_kumar.androidsandbox.Screens.StepperWithProgress
 import project.yugandhar_kumar.androidsandbox.Screens.SwipeToDeleteScreen
 import project.yugandhar_kumar.androidsandbox.Screens.TabLayoutWithViewPager
 import project.yugandhar_kumar.androidsandbox.Screens.ToastMessageScreen
@@ -80,6 +85,11 @@ fun NavGraph(navController: NavHostController) {
         composable("onboarding") { OnboardingScreen(navController) }
         composable("scrollToTop") { ScrollToTopScreen(navController) }
         composable("dragAndDrop") { DragAndDropScreen(navController) }
+        composable("bottomAppBarWithActions") { BottomAppBarWithActionsScreen(navController) }
+        composable("sideNavigationDrawer") { SideNavigationDrawerScreen(navController) }
+        composable("stepperWithProgress") { StepperWithProgress(navController) }
+        composable("circularImageLoader") { CircularImageLoaderScreen(navController) }
+        composable("customLoadingDialog") { CustomLoadingDialogScreen(navController) }
     }
 }
 
