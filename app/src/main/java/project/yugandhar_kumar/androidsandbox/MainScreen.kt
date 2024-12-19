@@ -63,6 +63,9 @@ fun MainScreen(navController: NavHostController) {
         "Accordion List",
         "Segmented Buttons",
         "Badge",
+        "Onboarding",
+        "Scroll To Top",
+        "Drag And Drop"
     )
 
     Scaffold(
@@ -123,6 +126,9 @@ fun MainScreen(navController: NavHostController) {
                                         "Accordion List" -> navController.navigate("accordionList")
                                         "Segmented Buttons" -> navController.navigate("segmentedButtons")
                                         "Badge" -> navController.navigate("badge")
+                                        "Onboarding" -> navController.navigate("onboarding")
+                                        "Scroll To Top" -> navController.navigate("scrollToTop")
+                                        "Drag And Drop" -> navController.navigate("dragAndDrop")
                                     }
                                 },
                             shape = RoundedCornerShape(8.dp),

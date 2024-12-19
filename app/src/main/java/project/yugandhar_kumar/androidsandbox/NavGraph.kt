@@ -15,6 +15,7 @@ import project.yugandhar_kumar.androidsandbox.Screens.CheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ChipsSelectionScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DateTimePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DialogScreen
+import project.yugandhar_kumar.androidsandbox.Screens.DragAndDropScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropDownCheckboxScreen
 import project.yugandhar_kumar.androidsandbox.Screens.DropdownMenuScreen
 import project.yugandhar_kumar.androidsandbox.Screens.EmptyStateScreen
@@ -23,12 +24,14 @@ import project.yugandhar_kumar.androidsandbox.Screens.FabMenuScreen
 import project.yugandhar_kumar.androidsandbox.Screens.FullScreenLoadingIndicator
 import project.yugandhar_kumar.androidsandbox.Screens.ImagePickerScreen
 import project.yugandhar_kumar.androidsandbox.Screens.NetworkErrorScreen
+import project.yugandhar_kumar.androidsandbox.Screens.OnboardingScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PaginationLoaderScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PopupScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.ProgressIndicatorScreen
 import project.yugandhar_kumar.androidsandbox.Screens.PullToRefreshScreen
 import project.yugandhar_kumar.androidsandbox.Screens.RatingReviewScreen
+import project.yugandhar_kumar.androidsandbox.Screens.ScrollToTopScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SearchBarScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SegmentedButtonsScreen
 import project.yugandhar_kumar.androidsandbox.Screens.SnackBarScreen
@@ -74,6 +77,9 @@ fun NavGraph(navController: NavHostController) {
         composable("accordionList") { AccordionListScreen(navController) }
         composable("segmentedButtons") { SegmentedButtonsScreen(navController) }
         composable("badge") { BadgeScreen(navController) }
+        composable("onboarding") { OnboardingScreen(navController) }
+        composable("scrollToTop") { ScrollToTopScreen(navController) }
+        composable("dragAndDrop") { DragAndDropScreen(navController) }
     }
 }
 
