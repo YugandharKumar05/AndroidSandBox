@@ -1,5 +1,7 @@
 package project.yugandhar_kumar.androidsandbox.Screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,16 +19,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.CustomTopAppBar
+import project.yugandhar_kumar.androidsandbox.Screens.Comps.GitHubLoginButton
 
 @Composable
 fun CheckboxScreen(navController: NavHostController) {
     val checkboxItems = listOf("Item 1", "Item 2", "Item 3")
     val checkboxStates = remember { checkboxItems.map { mutableStateOf(false) } }
+
+    val context = LocalContext.current
+    val url = "https://github.com/YugandharKumar05/AndroidSandBox/blob/master/app/src/main/java/project/yugandhar_kumar/androidsandbox/Screens/Checkbox.kt"
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
     Scaffold(
         topBar = {
@@ -74,6 +82,10 @@ fun CheckboxScreen(navController: NavHostController) {
                 }",
                 fontSize = 16.sp
             )
+            Spacer(modifier = Modifier.height(10.dp))
+            GitHubLoginButton(onClick = {
+                context.startActivity(intent)
+            })
         }
     }
 }

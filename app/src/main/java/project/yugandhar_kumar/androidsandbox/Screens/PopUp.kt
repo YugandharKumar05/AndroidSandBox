@@ -1,7 +1,10 @@
 package project.yugandhar_kumar.androidsandbox.Screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -21,16 +24,22 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
 import androidx.navigation.NavHostController
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.CustomTopAppBar
+import project.yugandhar_kumar.androidsandbox.Screens.Comps.GitHubLoginButton
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.ReusableButton
 
 @Composable
 fun PopupScreen(navController: NavHostController) {
     var showPopup by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val url = "https://github.com/YugandharKumar05/AndroidSandBox/blob/master/app/src/main/java/project/yugandhar_kumar/androidsandbox/Screens/PopUp.kt"
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
     Scaffold(
         topBar = {
@@ -43,10 +52,21 @@ fun PopupScreen(navController: NavHostController) {
                 .padding(paddingValues),
             contentAlignment = Alignment.Center
         ) {
-            ReusableButton(
-                buttonText = "Show Popup",
-                onClick = { showPopup = true }
-            )
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                // Reusable Button
+                ReusableButton(
+                    buttonText = "Show Popup",
+                    onClick = { showPopup = true }
+                )
+                Spacer(Modifier.height(10.dp))
+
+                GitHubLoginButton(onClick = {
+                    context.startActivity(intent)
+                })
+            }
 
             if (showPopup) {
                 Popup(

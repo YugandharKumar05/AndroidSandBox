@@ -1,5 +1,7 @@
 package project.yugandhar_kumar.androidsandbox.Screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,10 +22,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.CustomTopAppBar
+import project.yugandhar_kumar.androidsandbox.Screens.Comps.GitHubLoginButton
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.ReusableButton
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -31,6 +35,10 @@ import project.yugandhar_kumar.androidsandbox.Screens.Comps.ReusableButton
 fun BottomSheetScreen(navController: NavHostController) {
     val bottomSheetState = rememberModalBottomSheetState()
     var showBottomSheet by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val url = "https://github.com/YugandharKumar05/AndroidSandBox/blob/master/app/src/main/java/project/yugandhar_kumar/androidsandbox/Screens/BottomSheet.kt"
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
     Scaffold(
         topBar = {
@@ -49,6 +57,10 @@ fun BottomSheetScreen(navController: NavHostController) {
                 buttonText = "Show Bottom Sheet",
                 onClick = { showBottomSheet = true }
             )
+            Spacer(Modifier.height(10.dp))
+            GitHubLoginButton(onClick = {
+                context.startActivity(intent)
+            })
         }
     }
 

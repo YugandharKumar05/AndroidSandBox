@@ -1,5 +1,7 @@
 package project.yugandhar_kumar.androidsandbox.Screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,14 +18,20 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.CustomTopAppBar
+import project.yugandhar_kumar.androidsandbox.Screens.Comps.GitHubLoginButton
 import project.yugandhar_kumar.androidsandbox.Screens.Comps.ReusableButton
 
 @Composable
 fun ProgressIndicatorScreen(navController: NavHostController) {
     var isLoading by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val url = "https://github.com/YugandharKumar05/AndroidSandBox/blob/master/app/src/main/java/project/yugandhar_kumar/androidsandbox/Screens/ProgressIndicator.kt"
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
     Scaffold(
         topBar = {
@@ -46,10 +54,14 @@ fun ProgressIndicatorScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(16.dp))
 
             if (isLoading) {
-                CircularProgressIndicator() // Circular Progress
+                CircularProgressIndicator()
                 Spacer(modifier = Modifier.height(16.dp))
-                LinearProgressIndicator() // Linear Progress
+                LinearProgressIndicator()
             }
+            Spacer(Modifier.height(10.dp))
+            GitHubLoginButton(onClick = {
+                context.startActivity(intent)
+            })
         }
     }
 }
