@@ -22,7 +22,6 @@ import java.util.Calendar
 
 @Composable
 fun DateTimePickerScreen(navController: NavHostController) {
-    // State for the selected date and time
     var selectedDate by remember { mutableStateOf("No date selected") }
     var selectedTime by remember { mutableStateOf("No time selected") }
 

@@ -34,7 +34,7 @@ fun RatingBar(rating: Float, onRatingChanged: (Float) -> Unit) {
                  Box(
                     modifier = Modifier
                         .size(32.dp)
-                        .wrapContentSize() // Ensures proper alignment
+                        .wrapContentSize()
                         .clickable { onRatingChanged(i.toFloat()) }
                 ) {
                     Icon(

@@ -56,7 +56,6 @@ fun PopupScreen(navController: NavHostController) {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                // Reusable Button
                 ReusableButton(
                     buttonText = "Show Popup",
                     onClick = { showPopup = true }
